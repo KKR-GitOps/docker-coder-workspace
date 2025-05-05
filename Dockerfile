@@ -96,4 +96,7 @@ COPY --from=alpine/helm /usr/bin/helm /usr/bin/helm
 RUN wget -O - https://github.com/mike-engel/jwt-cli/releases/download/6.2.0/jwt-linux.tar.gz | tar zx && \
     mv jwt /usr/local/bin
 
+# uv
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
 USER coder
