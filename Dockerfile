@@ -30,7 +30,8 @@ RUN apt-get install -y --no-install-recommends \
     g++ \
     gcc \
     llvm \
-    git
+    git \
+    gnupg
 
 # dev libraries
 RUN apt install -y --no-install-recommends \
@@ -98,5 +99,7 @@ RUN wget -O - https://github.com/mike-engel/jwt-cli/releases/download/6.2.0/jwt-
 
 # uv
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
+
 
 USER coder
