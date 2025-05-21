@@ -20,7 +20,9 @@ RUN apt-get install -y --no-install-recommends \
     xz-utils \
     httpie \
     rclone \
-    fuse
+    fuse \
+    gnupg \
+    socat
 
 # dev tools
 RUN apt-get install -y --no-install-recommends \
@@ -30,8 +32,7 @@ RUN apt-get install -y --no-install-recommends \
     g++ \
     gcc \
     llvm \
-    git \
-    gnupg
+    git
 
 # dev libraries
 RUN apt install -y --no-install-recommends \
